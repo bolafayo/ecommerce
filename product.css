@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: black;
+    color: white; */
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content:space-between ;
+    background-color: black;
+    text-align: end;
+    padding: 20px 20px;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: end;
+ margin: 20px 20px;
+ font-size: 22px;
+
+}
+.nav-bar a:hover {
+    color: white;
+}
+.nav-bar i{
+    width: 27px;
+    color: white;
+   margin-left: 10px;
+}
+a{
+    margin-top: 100px;
+    font-size: 23px;
+  padding-top: 20px;
+    text-decoration: none;
+    color: black;
+}
+.product-detail img{
+    width: 80%;
+    margin-top: 120px;
+    height: 100%;
+    margin-left: 35px;
+padding: 50px 90px;
+    border-radius: 10px;
+  background-color: rgb(207, 222, 222);
+}
+.product-detail h2{
+    width: 400px;
+    padding: 0 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+#size-options p{
+    font-size: 22px;
+    margin: 30px;
+}
+
+.size-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid #ccc;
+  background: #f9f9f9;
+  color: #333;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+}
+#size-options button{
+    font-size: 20px;
+  background-color: rgb(250, 252, 252);
+  width: 50px;
+  border-color: rgb(116, 112, 112);
+  padding: 12px;
+  border-radius: 25px;
+ margin: 0 20px;
+}
+.size-btn:hover button{
+    background-color: #8b8484;
+  border-color: #999;
+}
+
+.size-btn:hover {
+  background-color: #8b8484;
+  border-color: #999;
+}
+
+.size-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #121314;
+  box-shadow: 0 2px 8px rgba(22, 26, 30, 0.4);
+}
+hr{
+    margin-top: 20px;
+  
+}
+.product-detail p{
+    font-size: 20px;
+    margin: 20px;
+    line-height: 1.5;
+}
+#addToCartBtn {
+    width: 250px;
+    padding: 20px;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    margin:0 80px;
+}
