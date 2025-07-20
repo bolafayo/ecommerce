@@ -34,17 +34,26 @@ async function loadProducts() {
       </div>
     `;
 
-     document.querySelectorAll(".size-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".size-btn").forEach(b => b.classList.remove("selected"));
-        btn.classList.add("selected");
-      });
+    handleSizeSelection();
+
+ 
+    document.getElementById("addToCartBtn").addEventListener("click", () => {
+      addToCart(product);
     });
-      document.getElementById("addToCartBtn").addEventListener("click", () => addToCart(product));
+     
   } catch (error) {
     console.error("Failed to load product", error);
     detailContainer.innerHTML = "<p>Error loading product.</p>";
   }
+}
+function handleSizeSelection() {
+  const sizeButtons = document.querySelectorAll(".size-btn");
+  sizeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      sizeButtons.forEach(btn => btn.classList.remove("selected"));
+      button.classList.add("selected");
+    });
+  });
 }
 function  addToCart(product) {
   const token = localStorage.getItem("token")
@@ -53,11 +62,12 @@ function  addToCart(product) {
      window.location.href = "login.html";
     return;
   }
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
- 
   const selectedSizeBtn = document.querySelector(".size-btn.selected");
   const size = selectedSizeBtn ? selectedSizeBtn.dataset.size : null;
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
   cart.push({
     id: product.id,
@@ -70,7 +80,7 @@ localStorage.setItem("cart", JSON.stringify(cart));
 
   VanillaToasts.create({
     title: 'Cart Updated',
-    text: `${product.title} added to cart.`,
+    text: `${product.title} added to cart${size ? " (Size: " + size + ")" : ""}`,
     type: 'success',
     timeout: 2000
   });
