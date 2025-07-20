@@ -34,11 +34,47 @@ async function loadProducts() {
       </div>
     `;
 
-    document.getElementById("addToCartBtn").addEventListener("click",() => addToCart(product))
-    } catch (error) {
-        console.log("failed to load product", error);
-        detailContainer.innerHTML ="<p>Error loading product.<p/>"
-        
-    }
+     document.querySelectorAll(".size-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".size-btn").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+      });
+    });
+      document.getElementById("addToCartBtn").addEventListener("click", () => addToCart(product));
+  } catch (error) {
+    console.error("Failed to load product", error);
+    detailContainer.innerHTML = "<p>Error loading product.</p>";
+  }
 }
+function  addToCart(product) {
+  const token = localStorage.getItem("token")
+  if(!token){
+    alert("please log in to add items to your cart")
+     window.location.href = "login.html";
+    return;
+  }
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+ 
+  const selectedSizeBtn = document.querySelector(".size-btn.selected");
+  const size = selectedSizeBtn ? selectedSizeBtn.dataset.size : null;
+
+  cart.push({
+    id: product.id,
+    title: product.title,
+    price: product.price,
+    image: product.image,
+    size: size
+  });
+localStorage.setItem("cart", JSON.stringify(cart));
+
+  VanillaToasts.create({
+    title: 'Cart Updated',
+    text: `${product.title} added to cart.`,
+    type: 'success',
+    timeout: 2000
+  });
+  
+}
+
 loadProducts()
