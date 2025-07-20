@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce website</title>
+    <title>registration</title>
+    <link rel="stylesheet" href="registration.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdn.jsdelivr.net/npm/vanillatoasts/vanillatoasts.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillatoasts/vanillatoasts.css">
     
 </head>
 <body>
+   <nav class="nav-bar">
+     <h1>Productstore</h1>
+         <a href="index.html">Home<i class="fa-solid fa-house-user"></i></a>
+      <a href="cart.html">Cart<i class="fa-solid fa-cart-shopping"></i></a>
+      <a href="login.html">Login<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+    </nav>
     <div id="error"></div>
-    <form  id="login">
+    <div class="login-container" >
+      <h2>Registration!</h2>
+ <form  id="login">
           <label for="name">Name
         <input type="text" name="name" id="name">
     </label>
-     <label for="userName">userName
-        <input type="text" name="userName" id="userName">
+     <label for="username">userName
+        <input type="text" name="username" id="username">
     </label>
      <label for="email">Email
         <input type="text" name="email" id="email">
@@ -24,11 +36,13 @@
     <button id="submit" type="submit">submit</button>
     </form>
   <div id="info"></div>
+    </div>
+   
 
 
 
 
 
-  <script src="./app.js"></script>
+  <script src="./registration.js"></script>
 </body>
 </html>
