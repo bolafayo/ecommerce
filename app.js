@@ -60,6 +60,22 @@ function populateCategories(products) {
     ${categories.map(cat => `<option value="${cat}">${cat}</option>`).join("")}
   `;
 }
+function observeScrollAnimations() {
+  const cards = document.querySelectorAll(".product-card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, {
+    threshold: 0.1 
+  });
+
+  cards.forEach(card => observer.observe(card));
+}
 
 categorySelect.addEventListener("change", filterProducts);
 searchInput.addEventListener("input", filterProducts);
@@ -77,4 +93,4 @@ function filterProducts() {
   renderProducts(filtered);
 }
 
-loadProducts();
+loadProducts().then(observeScrollAnimations);
