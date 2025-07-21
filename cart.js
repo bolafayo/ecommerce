@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  const token = localStorage.getItem("token")
+  if(!token){
+    alert("you must be logged in to view your cart")
+    window.location.href ="login.html"
+    return;
+  }
   const cartItemsContainer = document.getElementById("cart-items");
   const totalPriceEl = document.getElementById("total-price");
   const clearCartBtn = document.getElementById("clear-cart");
@@ -6,16 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoutBtn = document.getElementById("logout-btn");
 
   const username = localStorage.getItem("username");
-  if (username) {
+  if (username && userGreeting) {
     userGreeting.textContent = `Welcome, ${username}`;
     
   }
-
-  logoutBtn.addEventListener("click", () => {
+if(logoutBtn){
+logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("token");
     localStorage.removeItem("username");
     location.reload();
   });
+}
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -36,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     itemDiv.innerHTML = `
       <img src="${item.image}" alt="${item.title}" width="50" height="50">
       <span>${item.title} - $${item.price.toFixed(2)}</span>
+        ${item.size ? `<span>Size: ${item.size}</span><br/>` : ""}
       <button data-index="${index}" class="remove-btn">Remove</button>
     `;
     cartItemsContainer.appendChild(itemDiv);
