@@ -36,12 +36,7 @@
     background-image: url(asset/img/pho1.jpg);
   font-family: 'Segoe UI', sans-serif;
    object-fit: contain;
- 
-  /* background: linear-gradient(to right, #f3f4f6, #e5e7eb); */
   height: 100vh;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 .login-container h2 {
@@ -111,11 +106,11 @@ button[type="submit"]:hover {
     background-image: url(asset/img/pho1.jpg);
   font-family: 'Segoe UI', sans-serif;
    object-fit: contain;
-  /* background: linear-gradient(to right, #f3f4f6, #e5e7eb); */
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+ 
 }
 
 .login-container h2 {
@@ -143,6 +138,7 @@ button[type="submit"]:hover {
   margin-bottom: 0.4rem;
   font-weight: 500;
    color: #dce0ea;
+   margin-right: 220px;
 }
 
 #login input {
@@ -152,6 +148,7 @@ button[type="submit"]:hover {
   border-radius: 8px;
   font-size: 1rem;
   transition: 0.3s ease;
+  margin-right: 140px;
 }
 
 #login input:focus {
@@ -161,7 +158,7 @@ button[type="submit"]:hover {
 }
 
 button[type="submit"] {
-  width: 100%;
+  width: 67%;
   padding: 0.9rem;
   background-color: #979ca8;
   border: none;
