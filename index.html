@@ -10,21 +10,33 @@
 <body>
      <header>
     <nav class="nav-bar">
+       <h1>Productstore</h1>
       <a href="index.html">Home<i class="fa-solid fa-house-user"></i></a>
       <a href="cart.html">Cart<i class="fa-solid fa-cart-shopping"></i></a>
       <a href="login.html">Login<i class="fa-solid fa-arrow-right-to-bracket"></i></a>
     </nav>
   </header>
   <div class="main">
-     <img src="./asset/img/pho1.jpg" alt="">
+    <div> <img src="./asset/img/photo2.jpg" alt=""></div>
+    <div><img src="./asset/img/pho3.jpg" alt=""></div>
+    <div><img src="./asset/img/pho4.jpg" alt=""></div>
+     <div><img src="./asset/img/pho5.jpg" alt=""></div>
+    
+    
+     
   </div>
+ 
   <div class="filter-bar">
   <select id="category-filter"></select>
   <input type="text" id="search-input" placeholder="Search products..." />
  
 </div>
 
-<main id="product-list"></main>
+ <section  class="product-section">
+   <h2>Popular Product</h2>
+  <div  class="horizontal-scroll" id="product-list"></div>
+  
+ </section>
   <script src="app.js"></script>
 </body>
 </html>

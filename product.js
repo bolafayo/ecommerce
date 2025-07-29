@@ -34,11 +34,57 @@ async function loadProducts() {
       </div>
     `;
 
-    document.getElementById("addToCartBtn").addEventListener("click",() => addToCart(product))
-    } catch (error) {
-        console.log("failed to load product", error);
-        detailContainer.innerHTML ="<p>Error loading product.<p/>"
-        
-    }
+    handleSizeSelection();
+
+ 
+    document.getElementById("addToCartBtn").addEventListener("click", () => {
+      addToCart(product);
+    });
+     
+  } catch (error) {
+    console.error("Failed to load product", error);
+    detailContainer.innerHTML = "<p>Error loading product.</p>";
+  }
 }
+function handleSizeSelection() {
+  const sizeButtons = document.querySelectorAll(".size-btn");
+  sizeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      sizeButtons.forEach(btn => btn.classList.remove("selected"));
+      button.classList.add("selected");
+    });
+  });
+}
+function  addToCart(product) {
+  const token = localStorage.getItem("token")
+  if(!token){
+    alert("please log in to add items to your cart")
+     window.location.href = "login.html";
+    return;
+  }
+
+  const selectedSizeBtn = document.querySelector(".size-btn.selected");
+  const size = selectedSizeBtn ? selectedSizeBtn.dataset.size : null;
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+  cart.push({
+    id: product.id,
+    title: product.title,
+    price: product.price,
+    image: product.image,
+    size: size
+  });
+localStorage.setItem("cart", JSON.stringify(cart));
+
+  VanillaToasts.create({
+    title: 'Cart Updated',
+    text: `${product.title} added to cart${size ? " (Size: " + size + ")" : ""}`,
+    type: 'success',
+    timeout: 2000
+  });
+  
+}
+
 loadProducts()

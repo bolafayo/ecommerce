@@ -77,4 +77,4 @@ function filterProducts() {
   renderProducts(filtered);
 }
 
-loadProducts();
+loadProducts().then(observeScrollAnimations);
