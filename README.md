@@ -1,90 +1,94 @@
-##E-Commerce Website
+#E-Commerce Website
 
 A modern e-commerce web application where users can browse products, view details, choose sizes, register/log in, add items to their cart, and check out seamlessly. The project leverages API integration, local storage persistence, and a clean, responsive design for a smooth shopping experience.
+---
+👉**Live Demo**
 
-👉 Live Demo:https://ecommerce-six-topaz-75.vercel.app/
+https://ecommerce-six-topaz-75.vercel.app/
 
- Author
+##**Author**
 Bolade Olufayo – @Boladeolufayo
+---
+##**Features**
 
-##Features
-- Product listing with images, titles, and prices
+- **Product listing with images, titles, and prices**
   
-- Product detail page with size selection
+- **Product detail page with size selection**
   
--Add to cart (with authentication required)
+-**Add to cart (with authentication required)**
 
--Cart management (remove items, clear cart, calculate total price)
+-**Cart management (remove items, clear cart, calculate total price)**
 
--User authentication (registration & login)
+-**User authentication (registration & login)**
 
--LocalStorage API for cart and session persistence
+-**LocalStorage API for cart and session persistence**
 
--Responsive design with Flexbox & CSS3
+-**Responsive design with Grid & CSS3**
 
--Toast notifications for feedback (VanillaToasts)
+-**Toast notifications for feedback (VanillaToasts)**
 
--API integration (Fake Store API)
+-**API integration (Fake Store API)**
+---
+##**Technologies**
 
-##Technologies
+-**HTML5**
 
-HTML5
+-**CSS3 / Flexbox**
 
-CSS3 / Flexbox
+-**JavaScript (Vanilla)**
 
-JavaScript (Vanilla)
+-**Font Awesome**
 
-Font Awesome
+-**VanillaToasts**
 
-VanillaToasts
+-**LocalStorage API**
 
-LocalStorage API
+-**Fake Store API**
+---
+##**Installation**
 
-Fake Store API
+-Fork the repository
 
-##Installation
-
-Fork the repository
-
-Clone your forked repo
-
+-Clone your forked repo
+```bash
 git clone https://github.com/your-username/ecommerce-website.git
-
 cd ecommerce-website
-You can open index.html in your browser to run locally.
+```
+-You can open index.html in your browser to run locally.
+---
+##**Contributing**
 
-##Contributing
+-Contributions are welcome! Please follow the project’s coding style and open a pull request.
 
-Contributions are welcome! Please follow the project’s coding style and open a pull request.
-Steps to contribute:
+-Steps to contribute:
 
-Fork the repository
+-Fork the repository
 
-Clone your forked repo
+-Clone your forked repo
 
-Create a new branch
+-Create a new branch
 
-Commit and push changes
+-Commit and push changes
 
-Open a Pull Request
+-Open a Pull Request
 
-##License
+##**License**
 
-This project is licensed under the MIT License.
+-This project is licensed under the MIT License.
 
-##Lessons Learned
+##**Lessons Learned**
 
-Working with APIs and handling dynamic data
+-Working with APIs and handling dynamic data
 
-Managing state through LocalStorage
+-Managing state through LocalStorage
 
-Authentication workflows (registration/login)
+-Authentication workflows (registration/login)
 
-Error handling and user feedback with Toasts
+-Error handling and user feedback with Toasts
 
-Designing a smooth and responsive UI
+-Designing a smooth and responsive UI
 
-Debugging and persistence challenges
+-Debugging and persistence challenges
 
 
 
