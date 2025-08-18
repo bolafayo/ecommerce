@@ -3,6 +3,7 @@
 A modern e-commerce web application where users can browse products, view details, choose sizes, register/log in, add items to their cart, and check out seamlessly. The project leverages API integration, local storage persistence, and a clean, responsive design for a smooth shopping experience.
 
 👉 Live Demo: https://your-ecommerce-demo-link.com
+
  Author
 Bolade Olufayo – @Boladeolufayo
 
