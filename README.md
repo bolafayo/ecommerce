@@ -9,25 +9,41 @@ Bolade Olufayo – @Boladeolufayo
 
 ##Features
 - Product listing with images, titles, and prices
+  
 - Product detail page with size selection
+  
 -Add to cart (with authentication required)
+
 -Cart management (remove items, clear cart, calculate total price)
+
 -User authentication (registration & login)
+
 -LocalStorage API for cart and session persistence
+
 -Responsive design with Flexbox & CSS3
+
 -Toast notifications for feedback (VanillaToasts)
+
 -API integration (Fake Store API)
 
 ##Technologies
+
 HTML5
+
 CSS3 / Flexbox
+
 JavaScript (Vanilla)
+
 Font Awesome
+
 VanillaToasts
+
 LocalStorage API
+
 Fake Store API
 
 ##Installation
+
 Fork the repository
 
 Clone your forked repo
@@ -41,10 +57,15 @@ You can open index.html in your browser to run locally.
 
 Contributions are welcome! Please follow the project’s coding style and open a pull request.
 Steps to contribute:
+
 Fork the repository
+
 Clone your forked repo
+
 Create a new branch
+
 Commit and push changes
+
 Open a Pull Request
 
 ##License
@@ -52,11 +73,17 @@ Open a Pull Request
 This project is licensed under the MIT License.
 
 ##Lessons Learned
+
 Working with APIs and handling dynamic data
+
 Managing state through LocalStorage
+
 Authentication workflows (registration/login)
+
 Error handling and user feedback with Toasts
+
 Designing a smooth and responsive UI
+
 Debugging and persistence challenges
 
 
